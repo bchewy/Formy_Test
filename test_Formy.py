@@ -6,7 +6,7 @@ import time
 
 @pytest.fixture()
 def driver():
-    driver = webdriver.Chrome("/Users/Shared/Jenkins/Home/workspace/Formy_Test/chromedriver")
+    driver = webdriver.Chrome()
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
