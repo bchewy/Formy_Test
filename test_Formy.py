@@ -8,10 +8,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 @pytest.fixture()
 def driver():
-    desired_caps = DesiredCapabilities.CHROME
-    grid_url = "http://web-jenkins.southeastasia.cloudapp.azure.com:4444/wd/hub"
-    driver = webdriver.Remote(desired_capabilities=desired_caps, command_executor=grid_url)
-    #driver = webdriver.Chrome(chrome_options = options)
+    driver = webdriver.Chrome("/Users/Shared/Jenkins/Home/workspace/Formy_Test/chromedriver)
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
