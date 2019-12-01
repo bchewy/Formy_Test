@@ -6,7 +6,11 @@ import time
 
 @pytest.fixture()
 def driver():
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_argument('window-size=1920x1080')
+    options.add_argument("--no-sandbox")
+    
+    driver = webdriver.Chrome(options)
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
