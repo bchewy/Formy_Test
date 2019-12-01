@@ -3,12 +3,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import pytest
 import time
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-
 
 @pytest.fixture()
 def driver():
-    driver = webdriver.Chrome("/Users/Shared/Jenkins/Home/workspace/Formy_Test/chromedriver)
+    driver = webdriver.Chrome("/Users/Shared/Jenkins/Home/workspace/Formy_Test/chromedriver")
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
