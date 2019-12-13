@@ -6,7 +6,7 @@ import time
 
 @pytest.fixture()
 def driver():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome('./chromedriver')
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
